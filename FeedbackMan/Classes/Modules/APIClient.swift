@@ -26,16 +26,34 @@ final class APIClient{
         task.resume()
     }
     
+    static func createJiraIssue(api:JiraAPI, completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
+        let url = URL(string: api.buildURL)
+        var request = URLRequest(url: url!)
+        request.httpMethod = "POST"
+        let login = "{mail}:{pass}".data(using: .utf8)
+        let base64Login = login!.base64EncodedString(options: [])
+        request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        request.addValue("Basic \(base64Login)", forHTTPHeaderField: "Authorization")
+        request.httpBody = api.body
+        let task = URLSession.shared.dataTask(with: request, completionHandler: completion)
+        task.resume()
+    }
+    
     static func multipartPost(api: API, completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
         
         let url = URL(string: api.buildURL)
         let uniqueId = ProcessInfo.processInfo.globallyUniqueString
-        let boundary = "---------------------------\(uniqueId)"
+        let boundary = "---\(uniqueId)"
         var request = URLRequest(url: url!)
-        
         request.httpMethod = "POST"
+        let login = "{mail}:{pass}".data(using: .utf8)
+        let base64Login = login!.base64EncodedString(options: [])
+        request.addValue("no-check", forHTTPHeaderField: "X-Atlassian-Token")
+        request.addValue("Basic \(base64Login)", forHTTPHeaderField: "Authorization")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-        request.httpBody = createBody(parameters: api.parameters,boundary: boundary)
+        request.httpBody = createBody(parameters: api.parameters, boundary: boundary)
         let task = URLSession.shared.dataTask(with: request, completionHandler: completion)
         task.resume()
     }
@@ -55,6 +73,7 @@ final class APIClient{
                 body.append(bodyText.data(using: String.Encoding.utf8)!)
                 body.append(imageData!)
                 body.append("\r\n".data(using: String.Encoding.utf8)!)
+                print("bodyText: \(imageData!)")
             case let int as Int:
                 var bodyText = String()
                 bodyText += "--\(boundary)\r\n"

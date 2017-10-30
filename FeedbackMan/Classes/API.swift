@@ -1,9 +1,11 @@
 import Foundation
+
 protocol API {
     var buildURL: String { get }
     var baseURL: String { get }
     var path: String { get }
     var parameters: [String: Any] { get }
+    var body: Data { get }
 }
 
 public struct FeedbackData {
@@ -69,5 +71,60 @@ enum SlackAPI: API {
             params["initial_comment"] = fbdata.createFormattedText()
             return params
         }
+    }
+    
+    var body: Data {
+        return Data()
+    }
+}
+
+enum JiraAPI: API {
+    
+    case createIssue()
+    case attachFile(issueKey: String, image: UIImage)
+    
+    static let host = JiraManager.JiraConstants.host
+    static let projectID = JiraManager.JiraConstants.projectID
+    var buildURL: String {
+        return "\(baseURL)\(path)"
+    }
+    
+    var baseURL: String {
+        return "https://\(JiraAPI.host)"
+    }
+    
+    var path: String {
+        switch self {
+        case .createIssue(): return "/rest/api/2/issue"
+        case .attachFile(issueKey: let issueKey, _): return "/rest/api/2/issue/\(issueKey)/attachments"
+        }
+    }
+    
+    var parameters: [String: Any] {
+        switch self {
+        case .createIssue(): return [:]
+        case .attachFile(_, image: let image):
+            let params: [String: Any] = ["file": image]
+            return params
+        }
+    }
+    
+    var body: Data {
+        var project = [String: String]()
+        project["id"] = JiraAPI.projectID
+        var issueType = [String: String]()
+        issueType["id"] = "10004"
+        
+        var body = [String: Any]()
+        body["project"] = project
+        body["summary"] = "Sample bug"
+        body["description"] = "バグが発生しました！"
+        body["issuetype"] = issueType
+        
+        var fields = [String: Any]()
+        fields["fields"] = body
+        
+        let jsonData = try! JSONSerialization.data(withJSONObject: fields, options: [])
+        return jsonData
     }
 }

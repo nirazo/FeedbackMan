@@ -9,6 +9,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FeedbackManManager.APIConstants.token = ""
         FeedbackManManager.APIConstants.channel = ""
+        JiraManager.JiraConstants.host = ""
+        JiraManager.JiraConstants.projectID = ""
+        JiraManager.JiraConstants.mail = ""
+        JiraManager.JiraConstants.pass = ""
         window?.makeKeyAndVisible()
         #if DEBUG
             FeedbackManManager.sharedInstance.showDebugBtn()

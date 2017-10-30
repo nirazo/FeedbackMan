@@ -135,12 +135,26 @@ public final class ModalVC: UIViewController, UITextViewDelegate, UIScrollViewDe
         self.view.endEditing(true)
         indicator.startAnimating()
         
-        presenter.postFeedbackData(fbdata) { result in
+//        presenter.postFeedbackData(fbdata) { result in
+//            UIApplication.shared.endIgnoringInteractionEvents()
+//            DispatchQueue.main.async {
+//            self.indicator.stopAnimating()
+//                switch result {
+//                case .success:
+//                    self.showSuccessAlert()
+//                case .failure:
+//                    self.showFailureAlert()
+//                }
+//            }
+//        }
+        
+        presenter.createJiraIssue(image: screenshotImageView.image) { result in
             UIApplication.shared.endIgnoringInteractionEvents()
             DispatchQueue.main.async {
-            self.indicator.stopAnimating()
+                self.indicator.stopAnimating()
                 switch result {
                 case .success:
+                    print("success to create jira issue!!")
                     self.showSuccessAlert()
                 case .failure:
                     self.showFailureAlert()

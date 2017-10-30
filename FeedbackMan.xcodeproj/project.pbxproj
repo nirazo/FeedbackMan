@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		38A96D6D1F5D658300DA7B7D /* FeedbackManManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A96D6C1F5D658300DA7B7D /* FeedbackManManager.swift */; };
-		38A96D6F1F5D6A8700DA7B7D /* ScreenCaptureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A96D6E1F5D6A8700DA7B7D /* ScreenCaptureModel.swift */; };
-		38A96D711F5D6C4D00DA7B7D /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A96D701F5D6C4D00DA7B7D /* ModalView.swift */; };
-		38A96D731F5E4EFB00DA7B7D /* ModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A96D721F5E4EFA00DA7B7D /* ModalVC.swift */; };
+		38A96D6F1F5D6A8700DA7B7D /* ScreenCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A96D6E1F5D6A8700DA7B7D /* ScreenCapture.swift */; };
+		38A96D711F5D6C4D00DA7B7D /* ModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A96D701F5D6C4D00DA7B7D /* ModalVC.swift */; };
 		38A96D751F5E4FE800DA7B7D /* ModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A96D741F5E4FE800DA7B7D /* ModalPresenter.swift */; };
-		38A96D771F5E50A300DA7B7D /* ImageEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A96D761F5E50A300DA7B7D /* ImageEditView.swift */; };
-		38A96D791F5E50C100DA7B7D /* ImageEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A96D781F5E50C100DA7B7D /* ImageEditVC.swift */; };
-		38A96D7B1F5E50E500DA7B7D /* ImageEditPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A96D7A1F5E50E500DA7B7D /* ImageEditPresenter.swift */; };
+		38A96D771F5E50A300DA7B7D /* ImageEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A96D761F5E50A300DA7B7D /* ImageEditVC.swift */; };
 		38A96D7F1F5E83D500DA7B7D /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A96D7E1F5E83D500DA7B7D /* APIClient.swift */; };
 		38A96D821F5F9B8800DA7B7D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A96D811F5F9B8800DA7B7D /* API.swift */; };
 		38F78F621F569D82009A32D6 /* FeedbackMan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F78F581F569D82009A32D6 /* FeedbackMan.framework */; };
-		38F78F671F569D82009A32D6 /* FeedbackManTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F78F661F569D82009A32D6 /* FeedbackManTests.swift */; };
+		D293B3CA1FE2DD230093BB68 /* JiraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D293B3C91FE2DD230093BB68 /* JiraManager.swift */; };
+		D74C658F1FE1569C00643985 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C65891FE1569C00643985 /* UIImage.swift */; };
+		D74C65901FE1569C00643985 /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C658A1FE1569C00643985 /* UIView+Border.swift */; };
+		D74C65911FE1569C00643985 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C658B1FE1569C00643985 /* NSObject.swift */; };
+		D74C65921FE1569C00643985 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C658C1FE1569C00643985 /* UIApplication.swift */; };
+		D74C65931FE1569C00643985 /* UIDevice+platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C658D1FE1569C00643985 /* UIDevice+platform.swift */; };
+		D74C65941FE1569C00643985 /* NSMutableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C658E1FE1569C00643985 /* NSMutableData.swift */; };
+		D74C65991FE156D200643985 /* ModalVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74C65971FE156D200643985 /* ModalVC.storyboard */; };
+		D74C659A1FE156D200643985 /* ImageEditVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74C65981FE156D200643985 /* ImageEditVC.storyboard */; };
+		D74C659C1FE156E300643985 /* like_button.png in Resources */ = {isa = PBXBuildFile; fileRef = D74C659B1FE156E300643985 /* like_button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,22 +38,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		38A96D6C1F5D658300DA7B7D /* FeedbackManManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackManManager.swift; sourceTree = "<group>"; };
-		38A96D6E1F5D6A8700DA7B7D /* ScreenCaptureModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenCaptureModel.swift; sourceTree = "<group>"; };
-		38A96D701F5D6C4D00DA7B7D /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
-		38A96D721F5E4EFA00DA7B7D /* ModalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalVC.swift; sourceTree = "<group>"; };
-		38A96D741F5E4FE800DA7B7D /* ModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresenter.swift; sourceTree = "<group>"; };
-		38A96D761F5E50A300DA7B7D /* ImageEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageEditView.swift; sourceTree = "<group>"; };
-		38A96D781F5E50C100DA7B7D /* ImageEditVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageEditVC.swift; sourceTree = "<group>"; };
-		38A96D7A1F5E50E500DA7B7D /* ImageEditPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageEditPresenter.swift; sourceTree = "<group>"; };
-		38A96D7D1F5E803600DA7B7D /* api_snipet.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = api_snipet.playground; sourceTree = "<group>"; };
-		38A96D7E1F5E83D500DA7B7D /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		38A96D6C1F5D658300DA7B7D /* FeedbackManManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedbackManManager.swift; path = Modules/FeedbackManManager.swift; sourceTree = "<group>"; };
+		38A96D6E1F5D6A8700DA7B7D /* ScreenCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScreenCapture.swift; path = Modules/ScreenCapture.swift; sourceTree = "<group>"; };
+		38A96D701F5D6C4D00DA7B7D /* ModalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModalVC.swift; path = ViewControllers/ModalVC.swift; sourceTree = "<group>"; };
+		38A96D741F5E4FE800DA7B7D /* ModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModalPresenter.swift; path = Presenters/ModalPresenter.swift; sourceTree = "<group>"; };
+		38A96D761F5E50A300DA7B7D /* ImageEditVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageEditVC.swift; path = ViewControllers/ImageEditVC.swift; sourceTree = "<group>"; };
+		38A96D7E1F5E83D500DA7B7D /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = Modules/APIClient.swift; sourceTree = "<group>"; };
 		38A96D811F5F9B8800DA7B7D /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		38F78F581F569D82009A32D6 /* FeedbackMan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FeedbackMan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		38F78F5C1F569D82009A32D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38F78F611F569D82009A32D6 /* FeedbackManTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedbackManTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38F78F661F569D82009A32D6 /* FeedbackManTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackManTests.swift; sourceTree = "<group>"; };
-		38F78F681F569D82009A32D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D293B3C91FE2DD230093BB68 /* JiraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JiraManager.swift; path = Modules/JiraManager.swift; sourceTree = "<group>"; };
+		D74C65891FE1569C00643985 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Extensions/UIImage.swift; sourceTree = "<group>"; };
+		D74C658A1FE1569C00643985 /* UIView+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Border.swift"; path = "Extensions/UIView+Border.swift"; sourceTree = "<group>"; };
+		D74C658B1FE1569C00643985 /* NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSObject.swift; path = Extensions/NSObject.swift; sourceTree = "<group>"; };
+		D74C658C1FE1569C00643985 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIApplication.swift; path = Extensions/UIApplication.swift; sourceTree = "<group>"; };
+		D74C658D1FE1569C00643985 /* UIDevice+platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIDevice+platform.swift"; path = "Extensions/UIDevice+platform.swift"; sourceTree = "<group>"; };
+		D74C658E1FE1569C00643985 /* NSMutableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSMutableData.swift; path = Extensions/NSMutableData.swift; sourceTree = "<group>"; };
+		D74C65971FE156D200643985 /* ModalVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ModalVC.storyboard; path = Resources/Storyboard/ModalVC.storyboard; sourceTree = "<group>"; };
+		D74C65981FE156D200643985 /* ImageEditVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ImageEditVC.storyboard; path = Resources/Storyboard/ImageEditVC.storyboard; sourceTree = "<group>"; };
+		D74C659B1FE156E300643985 /* like_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = like_button.png; path = Resources/Images/like_button.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,44 +81,28 @@
 		38A96D651F5D5A8D00DA7B7D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				38A96D801F5F9B7100DA7B7D /* Enumlation */,
-				38A96D681F5D5CFB00DA7B7D /* Models */,
+				38A96D811F5F9B8800DA7B7D /* API.swift */,
+				D74C65881FE1568B00643985 /* Extensions */,
 				38A96D7C1F5E541700DA7B7D /* Modules */,
 				38A96D691F5D5D0E00DA7B7D /* Presenters */,
 				38A96D6A1F5D5D3500DA7B7D /* ViewControllers */,
-				38A96D6B1F5D5D5900DA7B7D /* Views */,
 			);
-			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		38A96D661F5D5A9600DA7B7D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D74C65961FE156C500643985 /* Storyboard */,
+				D74C65951FE156BE00643985 /* Images */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		38A96D671F5D5AB400DA7B7D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				38F78F5C1F569D82009A32D6 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		38A96D681F5D5CFB00DA7B7D /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				38A96D6E1F5D6A8700DA7B7D /* ScreenCaptureModel.swift */,
-			);
-			name = Models;
 			sourceTree = "<group>";
 		};
 		38A96D691F5D5D0E00DA7B7D /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
 				38A96D741F5E4FE800DA7B7D /* ModalPresenter.swift */,
-				38A96D7A1F5E50E500DA7B7D /* ImageEditPresenter.swift */,
 			);
 			name = Presenters;
 			sourceTree = "<group>";
@@ -117,44 +110,27 @@
 		38A96D6A1F5D5D3500DA7B7D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				38A96D721F5E4EFA00DA7B7D /* ModalVC.swift */,
-				38A96D781F5E50C100DA7B7D /* ImageEditVC.swift */,
+				38A96D701F5D6C4D00DA7B7D /* ModalVC.swift */,
+				38A96D761F5E50A300DA7B7D /* ImageEditVC.swift */,
 			);
 			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		38A96D6B1F5D5D5900DA7B7D /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				38A96D701F5D6C4D00DA7B7D /* ModalView.swift */,
-				38A96D761F5E50A300DA7B7D /* ImageEditView.swift */,
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 		38A96D7C1F5E541700DA7B7D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				38A96D6E1F5D6A8700DA7B7D /* ScreenCapture.swift */,
 				38A96D7E1F5E83D500DA7B7D /* APIClient.swift */,
 				38A96D6C1F5D658300DA7B7D /* FeedbackManManager.swift */,
+				D293B3C91FE2DD230093BB68 /* JiraManager.swift */,
 			);
 			name = Modules;
-			sourceTree = "<group>";
-		};
-		38A96D801F5F9B7100DA7B7D /* Enumlation */ = {
-			isa = PBXGroup;
-			children = (
-				38A96D811F5F9B8800DA7B7D /* API.swift */,
-			);
-			name = Enumlation;
 			sourceTree = "<group>";
 		};
 		38F78F4E1F569D82009A32D6 = {
 			isa = PBXGroup;
 			children = (
-				38A96D7D1F5E803600DA7B7D /* api_snipet.playground */,
 				38F78F5A1F569D82009A32D6 /* FeedbackMan */,
-				38F78F651F569D82009A32D6 /* FeedbackManTests */,
 				38F78F591F569D82009A32D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -173,18 +149,38 @@
 			children = (
 				38A96D651F5D5A8D00DA7B7D /* Classes */,
 				38A96D661F5D5A9600DA7B7D /* Resources */,
-				38A96D671F5D5AB400DA7B7D /* Supporting Files */,
 			);
 			path = FeedbackMan;
 			sourceTree = "<group>";
 		};
-		38F78F651F569D82009A32D6 /* FeedbackManTests */ = {
+		D74C65881FE1568B00643985 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				38F78F661F569D82009A32D6 /* FeedbackManTests.swift */,
-				38F78F681F569D82009A32D6 /* Info.plist */,
+				D74C658E1FE1569C00643985 /* NSMutableData.swift */,
+				D74C658B1FE1569C00643985 /* NSObject.swift */,
+				D74C658C1FE1569C00643985 /* UIApplication.swift */,
+				D74C658D1FE1569C00643985 /* UIDevice+platform.swift */,
+				D74C65891FE1569C00643985 /* UIImage.swift */,
+				D74C658A1FE1569C00643985 /* UIView+Border.swift */,
 			);
-			path = FeedbackManTests;
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		D74C65951FE156BE00643985 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D74C659B1FE156E300643985 /* like_button.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		D74C65961FE156C500643985 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D74C65981FE156D200643985 /* ImageEditVC.storyboard */,
+				D74C65971FE156D200643985 /* ModalVC.storyboard */,
+			);
+			name = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +275,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D74C659C1FE156E300643985 /* like_button.png in Resources */,
+				D74C65991FE156D200643985 /* ModalVC.storyboard in Resources */,
+				D74C659A1FE156D200643985 /* ImageEditVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,15 +295,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38A96D711F5D6C4D00DA7B7D /* ModalView.swift in Sources */,
-				38A96D6F1F5D6A8700DA7B7D /* ScreenCaptureModel.swift in Sources */,
-				38A96D771F5E50A300DA7B7D /* ImageEditView.swift in Sources */,
-				38A96D731F5E4EFB00DA7B7D /* ModalVC.swift in Sources */,
+				38A96D711F5D6C4D00DA7B7D /* ModalVC.swift in Sources */,
+				D74C658F1FE1569C00643985 /* UIImage.swift in Sources */,
+				D74C65941FE1569C00643985 /* NSMutableData.swift in Sources */,
+				D293B3CA1FE2DD230093BB68 /* JiraManager.swift in Sources */,
+				D74C65901FE1569C00643985 /* UIView+Border.swift in Sources */,
+				D74C65921FE1569C00643985 /* UIApplication.swift in Sources */,
+				38A96D6F1F5D6A8700DA7B7D /* ScreenCapture.swift in Sources */,
+				38A96D771F5E50A300DA7B7D /* ImageEditVC.swift in Sources */,
 				38A96D821F5F9B8800DA7B7D /* API.swift in Sources */,
-				38A96D7B1F5E50E500DA7B7D /* ImageEditPresenter.swift in Sources */,
 				38A96D751F5E4FE800DA7B7D /* ModalPresenter.swift in Sources */,
+				D74C65931FE1569C00643985 /* UIDevice+platform.swift in Sources */,
+				D74C65911FE1569C00643985 /* NSObject.swift in Sources */,
 				38A96D6D1F5D658300DA7B7D /* FeedbackManManager.swift in Sources */,
-				38A96D791F5E50C100DA7B7D /* ImageEditVC.swift in Sources */,
 				38A96D7F1F5E83D500DA7B7D /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,7 +316,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38F78F671F569D82009A32D6 /* FeedbackManTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
