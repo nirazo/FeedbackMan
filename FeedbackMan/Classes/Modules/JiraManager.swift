@@ -11,6 +11,8 @@ public final class JiraManager {
     public struct JiraConstants {
         public static var host = ""
         public static var projectID = ""
+        public static var mail = ""
+        public static var pass = ""
     }
 
     public static let shared: JiraManager = {

@@ -30,7 +30,7 @@ final class APIClient{
         let url = URL(string: api.buildURL)
         var request = URLRequest(url: url!)
         request.httpMethod = "POST"
-        let login = "{mail}:{pass}".data(using: .utf8)
+        let login = "\(JiraManager.JiraConstants.mail):\(JiraManager.JiraConstants.pass)".data(using: .utf8)
         let base64Login = login!.base64EncodedString(options: [])
         request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
@@ -47,7 +47,7 @@ final class APIClient{
         let boundary = "---\(uniqueId)"
         var request = URLRequest(url: url!)
         request.httpMethod = "POST"
-        let login = "{mail}:{pass}".data(using: .utf8)
+        let login = "\(JiraManager.JiraConstants.mail):\(JiraManager.JiraConstants.pass)".data(using: .utf8)
         let base64Login = login!.base64EncodedString(options: [])
         request.addValue("no-check", forHTTPHeaderField: "X-Atlassian-Token")
         request.addValue("Basic \(base64Login)", forHTTPHeaderField: "Authorization")
